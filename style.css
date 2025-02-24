@@ -57,8 +57,13 @@ header {
 /* Asegura que la badge no se salga de la pantalla en móviles */
 @media (max-width: 768px) {
     .badge {
-        right: 0; /* Ajusta la posición en móviles */
-        transform: translateX(30%); /* Mantiene alineado en pantallas más pequeñas */
+        right: auto; /* Evita que se corte */
+        left: 50%; /* Centra horizontalmente */
+        transform: translateX(-50%); /* Ajusta la posición */
+        font-size: 22px; /* Reduce el tamaño para móviles */
+        padding: 6px 12px; /* Ajusta el padding para mejor ajuste */
+        white-space: nowrap; /* Evita que el texto se corte */
+        max-width: 90%; /* Evita que sea demasiado ancha */
     }
 }
 
